@@ -54,6 +54,15 @@ def show_melon(melon_id):
     print(melon)
     return render_template("melon_details.html",
                            display_melon=melon)
+    #TEMPLATE RENDERING NOTES:
+    #  flask.render_template(template_name_or_list, **context)
+    # Render a template by name with the given context.
+    # Parameters
+    #         template_name_or_list (Union[str, jinja2.environment.Template, List[Union[str, jinja2.environment.Template]]]) – The name of the template to render. If a list is given, the first name to exist will be rendered.
+    #     
+    #         context (Any) – The variables to make available in the template.
+
+
 
 
 @app.route("/add_to_cart/<melon_id>")

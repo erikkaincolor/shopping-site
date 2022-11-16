@@ -1,0 +1,139 @@
+INITIAL NOTES:
+When clicking through the site:
+-home/landing page is non-scrollable, has pic background, text and 1 button
+-"add to cart" and "checkout", "login" page needed implementation
+-on the "melons" page, the melon name link and the details button led to same page
+-clicking ubermelon logo in top menu bar did nothing wheile on non-home pages
+theres math being done on the cart page!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The code to generate any given page in your browser will be spread across three (or maybe even four) files, but it is fairly straightforward to take a page and find the code that matches it.
+
+    Get the URL of the page. 
+http://localhost:5000 aka for erikkas machine "erikkasIPaddy:5000"
+*******************************************
+*******************************************
+*******************************************
+*******************************************
+    Locate the view function corresponding to that route in shoppingsite.py.
+line 30 in shoppingsite.py:
+
+@app.route("/")
+def index():
+    """Return homepage."""
+return render_template("homepage.html")
+*******************************************
+*******************************************
+*******************************************
+*******************************************
+    Any logic about the actual melons is located in melons.py. We’ve imported this into our shoppingsite.py as melons.
+line 12 in shoppingsite.py:
+import melons
+*******************************************
+*******************************************
+*******************************************
+*******************************************
+    The template name (.html file) will usually be located in the return statement for the function, as part of a render_template() call.
+-all our functions return html pages!!
+-render_template is a Flask function from the flask.templating package. 
+*******************************************
+*******************************************
+*******************************************
+*******************************************
+    From the template, locate any links or references to CSS files and images.
+
+
+BASE.HTML references/links:
+site.css
+ubermelon-logo.png
+watermelon.png
+
+HOMEPAGE.HTML:
+site.css
+ubermelon-logo.png
+watermelon.png
+
+ALL_MELONS.HTML
+base.html
+
+
+
+^all these notes are how we'll do the diagram!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+Variable Names in Templates:
+
+looking at return statements on shoppinf.py, youll see the 2nd parameter in the 
+render_templates function call (aka **contect in documentation) has a 2nd argumarnt 
+of display_melon and melon_list for certain html files...those are the variables in "{{}}"
+
+
+
+Jinja Control Structures:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+diagram link:
