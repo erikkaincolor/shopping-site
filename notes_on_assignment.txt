@@ -137,3 +137,33 @@ Jinja Control Structures:
 
 
 diagram link:
+
+
+
+
+
+
+
+
+
+
+all_melons.html successfuly links to melon_details.html via this code:
+<a class="btn btn-primary" href="/melon/{{ melon.melon_id }}">Details</a>
+
+i wanna know where "melon" Melon object was created
+
+melon_details.html needs to link to cart.html via:
+<a class="btn btn-primary" href="/add_to_cart/{{ display_melon.melon_id }}">Add to cart</a>
+
+i wanna know where "display_melon" Melon object was created
+
+for reference this is the .melon_id method in the Melon class in the melon.py file:
+
+def get_by_id(melon_id):
+    """Return a melon, given its ID."""
+
+    # This relies on access to the global dictionary `melon_types`
+
+    return melon_types[melon_id]
+
+    
